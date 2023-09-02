@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import sys
+import csv
+
+if (len(sys.argv) != 2):
+    print("Usage: factors <file>")
+    exit()
+
+with open(sys.argv[1], 'r') as file:
+    numbers = csv.reader(file)
+    for n in numbers:
+        i = 2
+        while (int(n[0]) % i != 0):
+            i = i + 1
+        print("{}={}*{}".format(int(n[0]), int(int(n[0]) / i), i))
+
+        #print(int(n[0]))
