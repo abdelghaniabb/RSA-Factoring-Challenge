@@ -3,33 +3,39 @@
 #include <math.h>
 
 double _atoi(char *s);
-
+/**
+ * main- checks code
+ * @argc: number of arguments passted
+ * @argv: list of arguments
+ * Return: 0
+*/
 int main(int argc, char *argv[])
 {
-    char number[50];
-    FILE *file;
-    double i = 2, n;
+	char number[50];
+	FILE *file;
+	double i = 2, n;
 
-    if (argc != 2)
-    {
-        printf("Usage: factors <file>\n");
-        exit(1);
-    }
+	if (argc != 2)
+	{
+		printf("Usage: factors <file>\n");
+		exit(1);
+	}
 
-    file = fopen(argv[1], "r");
-    if (file == NULL)
-    {
-        printf("can't open file\n");
-        exit(1);
-    }
+	file = fopen(argv[1], "r");
+	if (file == NULL)
+	{
+		printf("can't open file\n");
+		exit(1);
+	}
 
-    while (fgets(number, 50 * sizeof(char), file) != NULL)
-    {
-	    while (fmod(n, i) != 0)
-	    	i++;
-	    printf("%f=%f*%f",n , n / 2, i);	
-        printf("%f\n", _atoi(number));
-    }
+	while (fgets(number, 50 * sizeof(char), file) != NULL)
+	{
+		while (fmod(n, i) != 0)
+			i++;
+			printf("%f=%f*%f", n, n / 2, i);
+		printf("%f\n", _atoi(number));
+	}
+	return (0);
 }
 
 /**
