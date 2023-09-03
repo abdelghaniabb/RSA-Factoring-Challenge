@@ -12,5 +12,5 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. Factorize all the things! | [SOON](./) |
-| 1. RSA Factoring Challenge | [SOON](./) |
+| 0. Factorize all the things! | [factors.py](./factors.py) |
+| 1. RSA Factoring Challenge | [rsa.py](./rsa.py) |
