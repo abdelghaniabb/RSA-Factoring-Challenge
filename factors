@@ -29,7 +29,7 @@ def main(input_file):
             for line in file:
                 n = int(line.strip())
                 (p, q) = factorize(n)
-                print(f"{n}={p}*{q}")
+                print(f"{n}={q}*{p}")
     except FileNotFoundError:
         print("File not found.")
     except ValueError:
